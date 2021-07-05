@@ -1,0 +1,17 @@
+
+@include breakpoint-down(590px){
+    .burger{
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 17px;
+        background-image: url("../../images/icon-hamburger-menu.svg");
+        position: absolute;
+        top: 86px;
+        right: 30px;
+        z-index: 99;
+    }
+    .is-open{
+        background-image: url("../../images/close-burger.png");
+    }
+}
+

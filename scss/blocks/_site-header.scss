@@ -1,0 +1,19 @@
+.site-header{
+    padding-top: 77px;
+    padding-bottom:77px;
+}
+.site-header__container{
+    display: flex;
+    align-items: center;
+}
+.site-header__logo{
+    margin-right: 80px;
+}
+.site-header__logo--img{
+    display: block;
+}
+@include breakpoint-down(640px){
+    .site-header__logo{
+        margin-right: 40px;
+    }
+}
