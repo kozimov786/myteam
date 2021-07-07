@@ -1,0 +1,115 @@
+.site-footer{
+  background-color: $color-dark-green;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: relative;
+}
+.site-footer__container{
+  display: flex;
+  align-items: flex-start;
+}
+.site-footer__logo-img{
+  display: block;
+  margin-bottom: 25px;
+}
+
+.site-footer__list{
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+}
+.site-footer__item:first-child{
+  margin-right: 40px;
+}
+.site-footer__link{
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+.site-footer__nav-wrapper{
+  margin-right: 125px;
+}
+.site-footer__address{
+  max-width: 200px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.6;
+  margin-right: auto;
+}
+.site-footer__social{
+  text-align: right;
+  display: flex;
+  align-items: center;
+  margin-bottom: 51px;
+  justify-content:flex-end;
+  img{
+    margin-left: 16px;
+    display: block;
+  }
+}
+.site-footer__copy{
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.6;
+}
+@include breakpoint-down(820px){
+  .site-footer__nav-wrapper{
+    margin-right: 55px;
+  }
+}
+@include breakpoint-down(768px){
+   .site-footer__social{
+     position: absolute;
+     left: 15px;
+     bottom: -20px;
+   }
+   .site-footer__list{
+     margin-bottom: 35px;
+   }
+   .site-footer__address{
+     margin-left: auto;
+     margin-right: 0;
+   }
+   .site-footer__copy{
+     position: absolute;
+     right: 30px;
+     bottom: 30px;
+   }
+}
+@include breakpoint-down(490px){
+  .site-footer__social{
+    position: static;
+  }
+  .site-footer__list{
+    margin-bottom: 0;
+  }
+  .site-footer__address{
+    margin-left:0;
+    margin-right: 0;
+  }
+  .site-footer__copy{
+    position: static;
+  }
+  .site-footer__container{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .site-footer__nav-wrapper{
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  .site-footer__list{
+    justify-content: space-between;
+  }
+  .site-footer__address{
+    margin-bottom: 40px;
+  }
+  .site-footer__social{
+    justify-content: center;
+  }
+}

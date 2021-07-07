@@ -1,0 +1,79 @@
+.delivery{
+  padding-top: 140px;
+  padding-bottom: 151px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-image: url("../../images/delivery-right-bottom-bg.svg"),
+                    url("../../images/directors-right-bottom-bg.svg");
+  background-position: 100% 110%,
+                        -10px -10px;
+}
+.delivery__title{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  margin: 0;
+  margin-bottom: 92px;
+}
+.delivey__title--accent{
+  color: $color-rapture-blue;
+}
+.delivery__list{
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+}
+.delivery__item:not(:last-child){
+  margin-right: 30px;
+}
+.delivery__quote{
+  margin: 0;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 999;
+  &::before{
+    content: "";
+    width: 67px;
+    height: 56px;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../../images/double-quotes.svg");
+    top: -70%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+}
+.delivery__user{
+  font-weight: bold;
+  color: $color-rapture-blue;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.delivery__user--job{
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 32px;
+}
+@include breakpoint-down(850px){
+    .delivery__title{
+      max-width: 543px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    .delivery__list{
+      flex-direction: column;
+    }
+    .delivery__quote{
+      max-width: 543px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .delivery__item:not(:last-child){
+      margin-right: 0;
+      margin-bottom: 84px;
+    }
+}

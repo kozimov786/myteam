@@ -1,0 +1,41 @@
+.contact-us{
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background-color: $color-light-coral;
+  color:$color-sacramento-state-green;
+  background-repeat: no-repeat;
+  background-image: url("../../images/contact-us-bg.svg");
+  background-position: 0 130%;
+}
+.contact-us__container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-us__title{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  margin: 0;
+}
+.contact-us__btn{
+   color: $color-sacramento-state-green;
+   background-color: transparent;
+   border-color: $color-sacramento-state-green;
+   &:hover{
+    background-color: $color-sacramento-state-green;
+    color: #fff;
+    border-color: transparent;
+   }
+}
+@include breakpoint-down(768px){
+  .contact-us__container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-us__title{
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}

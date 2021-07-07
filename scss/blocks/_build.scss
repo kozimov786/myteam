@@ -1,0 +1,105 @@
+.build{
+  padding-top: 198px;
+  padding-bottom: 140px;
+  background-color: $color-dark-green;
+  background-repeat: no-repeat;
+  background-image: url("../../images/clients-left-top-bg.svg");
+  background-position: calc(50% + 700px) 100%;
+}
+.build__container{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.build__title{
+  max-width: 445px;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  position: relative;
+  margin: 0;
+  &::before{
+    content: "";
+    width: 50px;
+    height: 4px;
+    display: block;
+    background-color: $color-light-coral;
+    position: absolute;
+    top: -56px;
+    left: 0;
+  }
+}
+.build__list{
+  @include list-unstyled;
+  display: flex;
+  flex-direction: column;
+}
+.build__item{
+   max-width: 445px;
+   margin-bottom: 32px;
+   position: relative;
+   &::before{
+     content: "";
+     width: 56px;
+     height: 56px;
+     display: block;
+     margin-right: 23px;
+     position: absolute;
+     left: -20%;
+     top: 10px;
+   }
+  }
+   .build__item--experienced::before{
+     background-image: url("../../images/experienced-individuals.svg");
+   }
+   .build__item--easy::before{
+     background-image: url("../../images/easy-to-emplement.svg");
+   }
+   .build__item--enhanced::before{
+     background-image: url("../../images/enhanced-productivity.svg");
+   }
+  .build__item--title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-light-coral;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  .build__item--text{
+    margin: 0;
+  }
+  @include breakpoint-down (1050px){
+    .build__container{
+      flex-direction: column;
+      align-items: center;
+    }
+    .build__title{
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 64px;
+    }
+  }
+  @include breakpoint-down(768px){
+     .build__title{
+      font-size: 32px;
+      line-height: 32px;
+     }
+     .build{
+      background-position: 130% 10px;
+     }
+  }
+  @include breakpoint-down(678px){
+     .build__item{
+       padding-top: 60px;
+       max-width: 100%;
+       text-align: center;
+       &::before{
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         margin-bottom: 16px;
+       }
+     }
+ }
