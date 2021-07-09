@@ -1,0 +1,124 @@
+.contact {
+  padding-top: 50px;
+  padding-bottom: 140px;
+  background-repeat: no-repeat;
+  background-image: url(../../images/directors-left-bg.svg),
+                    url(../../images/contact-bg-left.png);
+
+  background-position: -10% top,right bottom;
+}
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact-info{
+  margin-right: 30px;
+}
+.contact-info__heading {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 100px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+.contact-info__about {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0;
+  color: $color-light-coral;
+  margin-bottom: 32px;
+}
+.contact-info__text {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    margin-right: 23px;
+  }
+}
+.contact-info__text-talent::before{
+  background-image: url(../../images/contact-bg.png);
+}
+.contact-info__text-software::before{
+  background-image: url(../../images/contact-bg2.svg);
+}
+.contact-info__text-help::before{
+  background-image: url(../../images/contact-bg3.png);
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  width: 100%;
+  input,
+  textarea{
+    padding: 16px;
+    color: #fff;
+    background-color:transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    resize: none;
+    &::placeholder{
+      color: #fff;
+    }
+    &:focus{
+      border-color:$color-rapture-blue;
+    }
+  }
+
+}
+.contact__btn{
+  margin-top: 24px;
+  width: 123px;
+  color: $color-deep-jungle-green;
+  &:hover{
+    background-color:transparent;
+    color: #fff;
+    border-color: #fff;
+  }
+}
+@include breakpoint-down(1050px){
+  .contact {
+    background-position: -10% -15%,right bottom;
+  }
+  .contact-form{
+    max-width: 450px;
+  }
+}
+@include breakpoint-down(950px){
+  .contact {
+    background-position: -10% -1%,right bottom;
+  }
+  .contact__container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info{
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}
+@include breakpoint-down(600px){
+  .contact {
+    background-position: -100% -100%,right bottom;
+  }
+  .contact-info{
+    margin-right: 0;
+  }
+  .contact-info__heading{
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .contact-info__about{
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+}
